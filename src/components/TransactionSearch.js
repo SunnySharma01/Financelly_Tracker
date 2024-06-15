@@ -15,7 +15,7 @@ const TransactionSearch = ({
   fetchTransactions,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const selectedTag = useState("");
+  const [selectedTag,setSelectedTag] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
   const [sortKey, setSortKey] = useState("");
   // const fileInput = useRef();
@@ -135,7 +135,7 @@ const TransactionSearch = ({
         </Select>
       </div>
 
-      {/* <Select
+      <Select
         style={{ width: 200, marginRight: 10 }}
         onChange={(value) => setSelectedTag(value)}
         placeholder="Filter by tag"
@@ -144,7 +144,7 @@ const TransactionSearch = ({
         <Option value="food">Food</Option>
         <Option value="education">Education</Option>
         <Option value="office">Office</Option>
-      </Select> */}
+      </Select>
       <div className="my-table">
         <div
           style={{
